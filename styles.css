@@ -74,11 +74,16 @@ body{
 }
 
 .Image-box{
-    position: absolute;
+    /* position: absolute;
     background-color: transparent;
     left: -10.5%;
-    top: 39%;
+    top: 39%; */
 
+    position: absolute;
+    background-color: transparent;
+    left: -11.5%;
+    top: 220px;
+    width: 20%;
 }
 
 .Section-Image{
@@ -136,6 +141,17 @@ body{
 .Section-FAQS-detail{
     display: flex;
         justify-content: space-between;
+        gap: 10px;
+}
+.Section-FAQS-detail p{
+    /* background-color: red; */
+    width: 80%;
+    height: 100%;
+
+}
+.Section-FAQS-detail img{
+    width: 20px;
+    height: 16px;
 }
 
 .Section-FAQS-detail.active{
@@ -159,6 +175,64 @@ body{
 
 .Section-FAQS-detail :hover{
     color: var(--Soft-red) ;
+}
+
+@media (max-width: 1120px) {
+    .Section-container{
+        width: 70%;
+        height: 70%;
+        max-width: 255px;
+        min-width: 255px;
+        /* margin: 0 auto; */
+        background-color: white;
+        border-radius: 25px;
+        box-shadow: rgb(38 57 77) 0px 20px 30px -10px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    .Section-Image{
+        height: 25%;
+        width: 100%;
+        /* background-color: green; */
+        position: relative;
+        overflow:visible;
+    }
+
+    .Image-womanOnline{
+        position: absolute;
+        top: -84px;
+        left: calc(50% - 35%);
+        width: 70%;
+    }
+    .Image-pattern-desktop{
+        position: absolute;
+        top: -52px;
+        left: 14%;
+        width: 70%;
+        height: 120%;
+    }
+    .Section-FAQS{
+        height: 100%;
+        width: 100%;
+        /* background-color: yellow; */
+        padding: 0% 0;
+        display: flex; 
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        overflow: scroll;
+    }
+
+    .Image-box{
+        position: absolute;
+        background-color: transparent;
+        left: 11.5%;
+        top: -31px;
+        width: 30%;
+    }
+
+    
 }
 
 
