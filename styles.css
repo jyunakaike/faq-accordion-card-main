@@ -117,7 +117,13 @@ body{
     display: flex; 
         flex-direction: column;
         overflow: scroll;
+        overflow-x: hidden; 
 }
+
+::-webkit-scrollbar {
+    display: none;
+}
+
 
 .Section-FAQS h1{
     color: var(--Very-dark-desaturated-blue) ; 
