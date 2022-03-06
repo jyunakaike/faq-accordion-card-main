@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,41 +28,89 @@
 
 <body>
   <main class="Main-container">
-    <section class="Section-container" >
-        <div class="Section-Image" >
-          <img src="./images/bg-pattern-desktop.svg" class="Image-pattern-desktop" alt="bg-pattern-desktop">
-          <img src="./images/illustration-woman-online-desktop.svg" class="Image-womanOnline" alt="woman-desktop">
-        </div>
-          <img src="./images/illustration-box-desktop.svg" class="Image-box" alt="Image-box">
+    <section class="Section-container">
+      <div class="Section-Image">
+        <img src="./images/bg-pattern-desktop.svg" class="Image-pattern-desktop" alt="bg-pattern-desktop">
+        <img src="./images/illustration-woman-online-desktop.svg" class="Image-womanOnline" alt="woman-desktop">
+      </div>
+      <img src="./images/illustration-box-desktop.svg" class="Image-box" alt="Image-box">
 
-        <div class="Section-FAQS"  > FAQS</div>
+      <div class="Section-FAQS">
+        <h1>FAQ</h1>
+
+        <div class="Section-FAQS-title">
+          <div class="Section-FAQS-detail">
+            <p>How many team members can I invite?</p>
+            <img style="width: 5%; height: 100%" class="icon" src="./images/icon-arrow-down.svg">
+          </div>
+          <div class="Section-FAQS-answer">
+            <p>You can invite up to 2 additional users on the Free plan. There is no limit on team members for the
+              Premium plan.</p>
+          </div>
+        </div>
+
+        <div class="Section-FAQS-title">
+          <div class="Section-FAQS-detail">
+            <p> What is the maximum file upload size?</p>
+            <img style="width: 5%; height: 100%" class="icon" src="./images/icon-arrow-down.svg">
+          </div>
+          <div class="Section-FAQS-answer">
+            <p>No more than 2GB. All files in your account must fit your allotted storage space.</p>
+          </div>
+        </div>
+
+        <div class="Section-FAQS-title">
+          <div class="Section-FAQS-detail">
+            <p> How do I reset my password?</p>
+            <img style="width: 5%; height: 100%" class="icon" src="./images/icon-arrow-down.svg">
+          </div>
+          <div class="Section-FAQS-answer">
+            <p>Click “Forgot password” from the login page or “Change password” from your profile page. A reset link
+              will be emailed to you.</p>
+          </div>
+        </div>
+
+        <div class="Section-FAQS-title">
+          <div class="Section-FAQS-detail">
+            <p>Can I cancel my subscription?</p>
+            <img style="width: 5%; height: 100%" class="icon" src="./images/icon-arrow-down.svg">
+          </div>
+          <div class="Section-FAQS-answer">
+            <p>Yes! Send us a message and we’ll process your request no questions asked.</p>
+          </div>
+        </div>
+        <div class="Section-FAQS-title">
+          <div class="Section-FAQS-detail">
+            <p> Do you provide additional support?</p>
+            <img style="width: 5%; height: 100%" class="icon" src="./images/icon-arrow-down.svg">
+          </div>
+          <div class="Section-FAQS-answer">
+            <p>Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+          </div>
+        </div>
+
+      </div>
 
     </section>
+
+    <script>
+      "use strict";
+      const q = document.querySelectorAll(".Section-FAQS-title");
+      q.forEach(
+        (element) => {
+          element.addEventListener("click", () => {
+            const answer = element.querySelector(".Section-FAQS-answer");
+            const question = element.querySelector(".Section-FAQS-detail");
+            const icon = element.querySelector(".icon");
+
+            answer.classList.toggle("show");
+            question.classList.toggle("active");
+            icon.classList.toggle("rot");
+          })
+        }
+      )
+    </script>
   </main>
-
-
-
-  <!-- How many team members can I invite?
-  You can invite up to 2 additional users on the Free plan. There is no limit on
-  team members for the Premium plan.
-
-  What is the maximum file upload size?
-  No more than 2GB. All files in your account must fit your allotted storage space.
-
-  How do I reset my password?
-  Click “Forgot password” from the login page or “Change password” from your profile page.
-  A reset link will be emailed to you.
-
-  Can I cancel my subscription?
-  Yes! Send us a message and we’ll process your request no questions asked.
-
-  Do you provide additional support?
-  Chat and email support is available 24/7. Phone lines are open during normal business hours.
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
 </body>
 
 </html>
